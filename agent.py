@@ -1,16 +1,17 @@
-from langchain_openai import ChatOpenAI
+from langchain_google_genai import ChatGoogleGenerativeAI
 
-from config import MODEL_NAME, TEMPERATURE, OPENAI_API_KEY
+from config import MODEL_NAME, TEMPERATURE, GOOGLE_API_KEY
 from prompt import CHAT_PROMPT
 
 
-llm = ChatOpenAI(
+llm = ChatGoogleGenerativeAI(
     model=MODEL_NAME,
     temperature=TEMPERATURE,
-    api_key=OPENAI_API_KEY
+    google_api_key=GOOGLE_API_KEY
 )
 
 chain = CHAT_PROMPT | llm
+
 
 def generate_draft(user_input, admin_feedback=""):
     response = chain.invoke(
