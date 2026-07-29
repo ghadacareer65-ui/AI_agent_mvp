@@ -1,7 +1,7 @@
 import streamlit as st
 from agent import generate_draft
 
-# Session State
+# Session State 
 
 if "draft_response" not in st.session_state:
     st.session_state.draft_response = ""
