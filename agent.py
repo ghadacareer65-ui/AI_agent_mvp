@@ -23,7 +23,6 @@ def generate_draft(
     previous_draft="",
     admin_feedback=""
 ):
-
     response = chain.invoke(
         {
             "user_input": user_input,

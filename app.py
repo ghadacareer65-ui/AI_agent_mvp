@@ -2,6 +2,7 @@ import streamlit as st
 
 from agent import generate_draft
 
+<<<<<<< HEAD
 from database import (
     create_conversation,
     save_message,
@@ -11,6 +12,9 @@ from database import (
 # Session State
 if "conversation_id" not in st.session_state:
     st.session_state.conversation_id = None
+=======
+# Session State 
+>>>>>>> dd4ee81b650b252cc12fc84b17ee2f9c8de841dc
 
 if "draft_response" not in st.session_state:
     st.session_state.draft_response = ""
@@ -224,6 +228,7 @@ st.text_area(
     height=220,
     disabled=True
 )
+<<<<<<< HEAD
 # عرض المحادثة الحالية
 if st.session_state.conversation_id is not None:
 
@@ -266,3 +271,5 @@ if st.session_state.conversation_id is not None:
                 st.success(" الرد النهائي")
 
                 st.write(message["message"])
+=======
+>>>>>>> dd4ee81b650b252cc12fc84b17ee2f9c8de841dc
